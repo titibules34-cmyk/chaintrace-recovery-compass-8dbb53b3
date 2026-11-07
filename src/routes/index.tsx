@@ -492,6 +492,37 @@ function Index() {
         </div>
       </section>
 
+      <section className="border-t border-border py-16 sm:py-20" aria-label="Accreditations and certifications">
+        <div className="mx-auto w-[min(100%-2rem,72rem)]">
+          <div className="flex flex-col items-center gap-3 text-center">
+            <span className="rounded-full bg-accent/15 px-4 py-1.5 text-xs font-bold tracking-widest text-accent">
+              ACCREDITATIONS &amp; CERTIFICATIONS
+            </span>
+            <p className="text-sm text-muted-foreground">
+              Recognized by global law enforcement &amp; regulatory authorities
+            </p>
+          </div>
+          <ul className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
+            {certifications.map(([src, label]) => (
+              <li
+                key={label}
+                className="flex items-center justify-center rounded-xl border border-border bg-card/60 p-4 transition hover:border-accent/50"
+              >
+                <img
+                  src={src}
+                  alt={label}
+                  title={label}
+                  loading="lazy"
+                  width={816}
+                  height={816}
+                  className="h-16 w-auto max-w-full object-contain"
+                />
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
       <footer className="border-t border-border bg-card/40">
         <div className="mx-auto grid w-[min(100%-2rem,72rem)] gap-10 py-14 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
           <div>

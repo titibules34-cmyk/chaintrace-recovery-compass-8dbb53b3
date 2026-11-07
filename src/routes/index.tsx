@@ -4,8 +4,8 @@ const WORDS = ["digital", "tracing", "intelligence", "recovery"];
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Globe, Users, Monitor, DollarSign, Code2, BarChart3, MapPin, Lock, ShieldCheck, ArrowRight, Phone, Clock, Send } from "lucide-react";
 import certAcfeCfe from "@/assets/certs/acfe-cfe.png";
-import certIafci from "@/assets/certs/iafci.png";
-import certFederalPolice from "@/assets/certs/federal-police.png";
+import certTali from "@/assets/certs/tali.png";
+import certCyberExpert from "@/assets/certs/cyber-expert.png";
 import certWad from "@/assets/certs/wad.png";
 import certCtce from "@/assets/certs/ctce.png";
 import certSectigo from "@/assets/certs/sectigo.png";
@@ -19,15 +19,15 @@ import certBbb from "@/assets/certs/bbb.png";
 import certFali from "@/assets/certs/fali.png";
 import certChainalysisSpecialist from "@/assets/certs/chainalysis-specialist.png";
 import certTrmAci from "@/assets/certs/trm-aci.png";
-import certCiphertrace from "@/assets/certs/ciphertrace.png";
+import certDuns from "@/assets/certs/duns.png";
 import certDmca from "@/assets/certs/dmca.png";
 import certAcfeMember from "@/assets/certs/acfe-member.png";
 import certAuthorizeNet from "@/assets/certs/authorize-net.png";
 
 const certifications: [string, string][] = [
   [certAcfeCfe, "Certified Fraud Examiner"],
-  [certIafci, "International Association of Financial Crimes Investigators"],
-  [certFederalPolice, "Federal Criminal Police"],
+  [certTali, "Texas Association of Licensed Investigators"],
+  [certCyberExpert, "Board Certified Cyber Investigations Expert"],
   [certWad, "World Association of Detectives"],
   [certCtce, "Certified Cryptocurrency Expert"],
   [certSectigo, "Secured by Sectigo"],
@@ -41,7 +41,7 @@ const certifications: [string, string][] = [
   [certFali, "Florida Association of Licensed Investigators"],
   [certChainalysisSpecialist, "Chainalysis Investigation Specialist Certification"],
   [certTrmAci, "TRM Anti-Money Laundering Cryptoasset Investigator"],
-  [certCiphertrace, "CipherTrace Certified Examiner"],
+  [certDuns, "D-U-N-S Registered"],
   [certDmca, "Protected by DMCA"],
   [certAcfeMember, "ACFE Associate Member"],
   [certAuthorizeNet, "Authorize.Net Verified Merchant"],

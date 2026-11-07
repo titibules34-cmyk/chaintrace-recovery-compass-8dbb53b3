@@ -3,6 +3,49 @@ import { useEffect, useState } from "react";
 const WORDS = ["digital", "tracing", "intelligence", "recovery"];
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Globe, Users, Monitor, DollarSign, Code2, BarChart3, MapPin, Lock, ShieldCheck, ArrowRight, Phone, Clock, Send } from "lucide-react";
+import certAcfeCfe from "@/assets/certs/acfe-cfe.png";
+import certIafci from "@/assets/certs/iafci.png";
+import certFederalPolice from "@/assets/certs/federal-police.png";
+import certWad from "@/assets/certs/wad.png";
+import certCtce from "@/assets/certs/ctce.png";
+import certSectigo from "@/assets/certs/sectigo.png";
+import certBig from "@/assets/certs/big.png";
+import certGba from "@/assets/certs/gba.png";
+import certGasa from "@/assets/certs/gasa.png";
+import certCompliassure from "@/assets/certs/compliassure.png";
+import certChainalysisReactor from "@/assets/certs/chainalysis-reactor.png";
+import certIacis from "@/assets/certs/iacis.png";
+import certBbb from "@/assets/certs/bbb.png";
+import certFali from "@/assets/certs/fali.png";
+import certChainalysisSpecialist from "@/assets/certs/chainalysis-specialist.png";
+import certTrmAci from "@/assets/certs/trm-aci.png";
+import certCiphertrace from "@/assets/certs/ciphertrace.png";
+import certDmca from "@/assets/certs/dmca.png";
+import certAcfeMember from "@/assets/certs/acfe-member.png";
+import certAuthorizeNet from "@/assets/certs/authorize-net.png";
+
+const certifications: [string, string][] = [
+  [certAcfeCfe, "Certified Fraud Examiner"],
+  [certIafci, "International Association of Financial Crimes Investigators"],
+  [certFederalPolice, "Federal Criminal Police"],
+  [certWad, "World Association of Detectives"],
+  [certCtce, "Certified Cryptocurrency Expert"],
+  [certSectigo, "Secured by Sectigo"],
+  [certBig, "Blockchain Intelligence Group"],
+  [certGba, "Government Blockchain Association"],
+  [certGasa, "Global Anti-Scam Alliance"],
+  [certCompliassure, "CompliAssure Secured"],
+  [certChainalysisReactor, "Chainalysis Reactor Certification"],
+  [certIacis, "International Association of Computer Investigative Specialists"],
+  [certBbb, "BBB Accredited Business — A+ Rating"],
+  [certFali, "Florida Association of Licensed Investigators"],
+  [certChainalysisSpecialist, "Chainalysis Investigation Specialist Certification"],
+  [certTrmAci, "TRM Anti-Money Laundering Cryptoasset Investigator"],
+  [certCiphertrace, "CipherTrace Certified Examiner"],
+  [certDmca, "Protected by DMCA"],
+  [certAcfeMember, "ACFE Associate Member"],
+  [certAuthorizeNet, "Authorize.Net Verified Merchant"],
+];
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -446,6 +489,37 @@ function Index() {
               </p>
             </form>
           </div>
+        </div>
+      </section>
+
+      <section className="border-t border-border py-16 sm:py-20" aria-label="Accreditations and certifications">
+        <div className="mx-auto w-[min(100%-2rem,72rem)]">
+          <div className="flex flex-col items-center gap-3 text-center">
+            <span className="rounded-full bg-accent/15 px-4 py-1.5 text-xs font-bold tracking-widest text-accent">
+              ACCREDITATIONS &amp; CERTIFICATIONS
+            </span>
+            <p className="text-sm text-muted-foreground">
+              Recognized by global law enforcement &amp; regulatory authorities
+            </p>
+          </div>
+          <ul className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
+            {certifications.map(([src, label]) => (
+              <li
+                key={label}
+                className="flex items-center justify-center rounded-xl border border-border bg-card/60 p-4 transition hover:border-accent/50"
+              >
+                <img
+                  src={src}
+                  alt={label}
+                  title={label}
+                  loading="lazy"
+                  width={816}
+                  height={816}
+                  className="h-16 w-auto max-w-full object-contain"
+                />
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 

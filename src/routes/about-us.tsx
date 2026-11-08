@@ -133,62 +133,62 @@ function AboutUs() {
 
 
 
-        <section className="about-rise mt-20 sm:mt-24">
-          <div className="grid items-center gap-10 rounded-[2rem] border border-blue-200/20 bg-white/[.065] p-6 shadow-[0_24px_90px_rgba(0,0,0,.2)] backdrop-blur-xl sm:p-9 lg:grid-cols-[.95fr_1.05fr] lg:gap-12 lg:p-12">
-            <div className="relative mx-auto flex w-full max-w-[28rem] items-center justify-center py-8">
-              <div className="absolute left-1/2 top-1/2 h-[22rem] w-[22rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-400/[.08] blur-3xl" />
-              <div className="absolute left-1/2 top-2 z-10 -translate-x-1/2 rounded-full border border-cyan-200/20 bg-[#102b55]/95 px-4 py-2 text-[.65rem] font-bold tracking-wide text-cyan-100 shadow-xl backdrop-blur">
+        <section className="about-rise mt-14 sm:mt-16">
+          <div className="grid items-center gap-6 rounded-[1.5rem] border border-blue-200/20 bg-white/[.065] p-5 shadow-[0_18px_55px_rgba(0,0,0,.18)] backdrop-blur-xl sm:p-6 lg:grid-cols-[.85fr_1.15fr] lg:gap-8 lg:p-7">
+            <div className="relative mx-auto flex w-full max-w-[22rem] items-center justify-center py-6">
+              <div className="absolute left-1/2 top-1/2 h-[17rem] w-[17rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-400/[.08] blur-3xl" />
+              <div className="absolute left-1/2 top-2 z-10 -translate-x-1/2 rounded-full border border-cyan-200/20 bg-[#102b55]/95 px-3 py-1.5 text-[.58rem] font-bold tracking-wide text-cyan-100 shadow-xl backdrop-blur">
                 <span className="mr-2 text-cyan-300">✓</span> INTELLIGENCE-LED APPROACH
               </div>
-              <div className="relative aspect-square w-[min(78vw,19rem)] rounded-full border border-cyan-200/25 p-3 shadow-[0_22px_45px_rgba(0,0,0,.35)] transition duration-700 hover:rotate-2">
+              <div className="relative aspect-square w-[min(68vw,15rem)] rounded-full border border-cyan-200/25 p-3 shadow-[0_22px_45px_rgba(0,0,0,.35)] transition duration-700 hover:rotate-2">
                 <div className="absolute inset-3 rounded-full border border-white/10" />
                 <div className="absolute inset-0 rounded-full bg-[conic-gradient(from_-18deg,#1769b5_0deg,#0d3973_72deg,#1265a9_144deg,#0c3269_216deg,#1681b7_288deg,#1769b5_360deg)] shadow-[inset_0_3px_18px_rgba(255,255,255,.18)]" />
                 <div className="absolute inset-[47%] rounded-full bg-[#0b2147] opacity-40 blur-md" />
                 <div className="absolute left-1/2 top-[5%] z-10 flex -translate-x-1/2 flex-col items-center text-center text-white">
-                  <Search className="h-7 w-7" />
-                  <span className="mt-1 text-[.65rem] font-bold">Identify</span>
+                  <Search className="h-5 w-5" />
+                  <span className="mt-1 text-[.55rem] font-bold">Identify</span>
                 </div>
                 <div className="absolute right-[8%] top-[26%] z-10 flex flex-col items-center text-center text-white">
                   <LockKeyhole className="h-7 w-7" />
-                  <span className="mt-1 text-[.65rem] font-bold">Protect</span>
+                  <span className="mt-1 text-[.55rem] font-bold">Protect</span>
                 </div>
                 <div className="absolute bottom-[24%] right-[8%] z-10 flex flex-col items-center text-center text-white">
                   <Crosshair className="h-7 w-7" />
-                  <span className="mt-1 text-[.65rem] font-bold">Trace</span>
+                  <span className="mt-1 text-[.55rem] font-bold">Trace</span>
                 </div>
                 <div className="absolute bottom-[5%] left-1/2 z-10 flex -translate-x-1/2 flex-col items-center text-center text-white">
                   <RotateCcw className="h-7 w-7" />
-                  <span className="mt-1 text-[.65rem] font-bold">Respond</span>
+                  <span className="mt-1 text-[.55rem] font-bold">Respond</span>
                 </div>
                 <div className="absolute bottom-[24%] left-[8%] z-10 flex flex-col items-center text-center text-white">
                   <BadgeCheck className="h-7 w-7" />
-                  <span className="mt-1 text-[.65rem] font-bold">Recover</span>
+                  <span className="mt-1 text-[.55rem] font-bold">Recover</span>
                 </div>
-                <div className="absolute left-1/2 top-1/2 z-20 flex h-[7.2rem] w-[7.2rem] -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-full border border-cyan-100/40 bg-gradient-to-br from-slate-100 to-blue-100 text-center text-[#15549a] shadow-[0_10px_28px_rgba(0,0,0,.3)]">
+                <div className="absolute left-1/2 top-1/2 z-20 flex h-[5.5rem] w-[5.5rem] -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-full border border-cyan-100/40 bg-gradient-to-br from-slate-100 to-blue-100 text-center text-[#15549a] shadow-[0_10px_28px_rgba(0,0,0,.3)]">
                   <span className="text-[.57rem] font-bold tracking-wide">CYBER JUSTICE</span>
-                  <span className="mt-1 text-sm font-extrabold leading-tight">ASSET<br/>RECOVERY</span>
+                  <span className="mt-1 text-xs font-extrabold leading-tight">ASSET<br/>RECOVERY</span>
                 </div>
               </div>
-              <div className="absolute bottom-2 left-0 z-20 rounded-full border border-cyan-200/20 bg-[#102b55]/95 px-4 py-2 text-[.62rem] font-semibold text-blue-100 shadow-xl backdrop-blur">
-                <ShieldCheck className="mr-2 inline h-3.5 w-3.5 text-cyan-300" /> Evidence-led investigations
+              <div className="absolute bottom-2 left-0 z-20 rounded-full border border-cyan-200/20 bg-[#102b55]/95 px-3 py-1.5 text-[.55rem] font-semibold text-blue-100 shadow-xl backdrop-blur">
+                <ShieldCheck className="mr-2 inline h-3 w-3 text-cyan-300" /> Evidence-led investigations
               </div>
             </div>
 
             <div className="relative">
-              <span className="inline-flex rounded-full border border-cyan-200/20 bg-cyan-300/[.08] px-4 py-1.5 text-[.65rem] font-bold tracking-[.18em] text-cyan-200">OUR APPROACH</span>
-              <h2 className="mt-5 text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-4xl">
-                Our Approach to Intelligence-Led <span className="bg-gradient-to-r from-cyan-300 to-blue-400 bg-clip-text text-transparent">Asset Recovery</span>
+              <span className="inline-flex rounded-full border border-cyan-200/20 bg-cyan-300/[.08] px-3 py-1 text-[.58rem] font-bold tracking-[.18em] text-cyan-200">OUR APPROACH</span>
+              <h2 className="mt-4 text-2xl font-extrabold leading-tight tracking-tight text-white sm:text-3xl">
+                Our Approach to <span className="bg-gradient-to-r from-cyan-300 to-blue-400 bg-clip-text text-transparent">Asset Recovery</span>
               </h2>
-              <p className="mt-5 text-sm leading-7 text-blue-100/75 sm:text-base">
-                At Cyber Justice, we believe informed recovery decisions begin with intelligence. Understanding the movement of assets, the people and entities connected to them, and the available evidence can help establish a clearer path forward.
+              <p className="mt-3 text-xs leading-6 text-blue-100/75 sm:text-sm">
+                At Cyber Justice, asset recovery begins with understanding the facts. We investigate the movement of funds and assets, examine the people and entities connected to them, and build an intelligence picture that can help guide the next steps.
+              </p>
+              <p className="mt-3 text-xs leading-6 text-blue-100/75 sm:text-sm">
+                Asset recovery investigations can involve complex wallet activity, multiple blockchain networks, company structures and cross-border connections. We combine <strong className="text-white">blockchain tracing, open-source research and financial intelligence</strong> to follow asset movements, identify potential leads and prepare clear findings for clients and their professional advisers.
               </p>
               <p className="mt-4 text-sm leading-7 text-blue-100/75 sm:text-base">
-                Digital asset investigations can involve complex wallet activity, multiple blockchain networks and cross-border connections. Our work combines <strong className="text-white">open-source research, blockchain analysis and investigative intelligence</strong> to trace relevant activity, identify potential leads and organise findings for clients and their professional advisers.
+                Each case is different. Our structured process focuses on identifying, tracing and documenting potentially recoverable assets, giving clients and their legal teams clearer information when considering recovery options. We provide investigative intelligence, not guarantees of recovery.
               </p>
-              <p className="mt-4 text-sm leading-7 text-blue-100/75 sm:text-base">
-                Every matter is different. We focus on a structured, evidence-led process and clear reporting — helping clients understand what the available information shows and what practical options may be worth considering. Recovery outcomes cannot be guaranteed.
-              </p>
-              <a href="/#contact" className="mt-7 inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 px-7 py-3.5 text-sm font-bold text-white shadow-[0_10px_30px_rgba(14,165,233,.25)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_14px_38px_rgba(14,165,233,.38)]">
+              <a href="/#contact" className="mt-5 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 px-5 py-2.5 text-xs font-bold text-white shadow-[0_10px_30px_rgba(14,165,233,.25)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_14px_38px_rgba(14,165,233,.38)]">
                 Discuss Your Case <ArrowRight className="h-4 w-4" />
               </a>
             </div>

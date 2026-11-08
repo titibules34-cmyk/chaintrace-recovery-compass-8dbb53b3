@@ -509,7 +509,7 @@ function Index() {
         </div>
       </section>
 
-      <section id="contact" className="mx-auto w-[min(100%-2rem,64rem)] pb-20">
+      <section id="contact" className="mx-auto w-[min(100%-2rem,64rem)] pt-8 pb-20">
         <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
           <div>
             <p className="eyebrow">Book appointment now!</p>

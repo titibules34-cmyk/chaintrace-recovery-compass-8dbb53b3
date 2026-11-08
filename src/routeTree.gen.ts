@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutUsRouteImport } from './routes/about-us'
 import { Route as AssetRecoveryRouteImport } from './routes/asset-recovery'
 import { Route as CryptocurrencyTracingRouteImport } from './routes/cryptocurrency-tracing'
 import { Route as CyberIntelligenceRouteImport } from './routes/cyber-intelligence'
@@ -19,6 +20,11 @@ import { Route as ApiPublicPushCertsRouteImport } from './routes/api/public/push
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutUsRoute = AboutUsRouteImport.update({
+  id: '/about-us',
+  path: '/about-us',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AssetRecoveryRoute = AssetRecoveryRouteImport.update({
@@ -49,6 +55,7 @@ const ApiPublicPushCertsRoute = ApiPublicPushCertsRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about-us': typeof AboutUsRoute
   '/asset-recovery': typeof AssetRecoveryRoute
   '/cryptocurrency-tracing': typeof CryptocurrencyTracingRoute
   '/cyber-intelligence': typeof CyberIntelligenceRoute
@@ -66,6 +73,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about-us': typeof AboutUsRoute
   '/asset-recovery': typeof AssetRecoveryRoute
   '/cryptocurrency-tracing': typeof CryptocurrencyTracingRoute
   '/cyber-intelligence': typeof CyberIntelligenceRoute
@@ -76,6 +84,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/about-us'
     | '/asset-recovery'
     | '/cryptocurrency-tracing'
     | '/cyber-intelligence'
@@ -101,6 +110,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutUsRoute: typeof AboutUsRoute
   AssetRecoveryRoute: typeof AssetRecoveryRoute
   CryptocurrencyTracingRoute: typeof CryptocurrencyTracingRoute
   CyberIntelligenceRoute: typeof CyberIntelligenceRoute
@@ -115,6 +125,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about-us': {
+      id: '/about-us'
+      path: '/about-us'
+      fullPath: '/about-us'
+      preLoaderRoute: typeof AboutUsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/asset-recovery': {
@@ -157,6 +174,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutUsRoute: AboutUsRoute,
   AssetRecoveryRoute: AssetRecoveryRoute,
   CryptocurrencyTracingRoute: CryptocurrencyTracingRoute,
   CyberIntelligenceRoute: CyberIntelligenceRoute,

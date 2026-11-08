@@ -64,6 +64,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about-us': typeof AboutUsRoute
   '/asset-recovery': typeof AssetRecoveryRoute
   '/cryptocurrency-tracing': typeof CryptocurrencyTracingRoute
   '/cyber-intelligence': typeof CyberIntelligenceRoute
@@ -93,6 +94,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/about-us'
     | '/asset-recovery'
     | '/cryptocurrency-tracing'
     | '/cyber-intelligence'
@@ -101,6 +103,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/about-us'
     | '/asset-recovery'
     | '/cryptocurrency-tracing'
     | '/cyber-intelligence'

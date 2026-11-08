@@ -329,7 +329,7 @@ function Index() {
               </a>
             </div>
           </div>
-          <a href="#offices" className="hidden rounded-full px-3 py-2 transition hover:bg-secondary hover:text-foreground sm:inline">Offices</a>
+          <Link to="/about-us" className="hidden rounded-full px-3 py-2 transition hover:bg-secondary hover:text-foreground sm:inline">About Us</Link>
           <a href="#contact" className="rounded-full bg-primary px-4 py-2 font-semibold text-primary-foreground shadow-glow transition hover:-translate-y-0.5 hover:opacity-90">Contact</a>
         </nav>
       </header>
@@ -660,7 +660,7 @@ function Index() {
             <ul className="mt-4 flex flex-col gap-2.5 text-sm text-muted-foreground">
               <li><a href="#services" className="hover:text-foreground">All Services</a></li>
               <li><a href="#tools" className="hover:text-foreground">Cyber Tools</a></li>
-              <li><a href="#offices" className="hover:text-foreground">Our Offices</a></li>
+              <li><Link to="/about-us" className="hover:text-foreground">About Us</Link></li>
               <li><a href="#contact" className="hover:text-foreground">Contact Us</a></li>
             </ul>
           </nav>

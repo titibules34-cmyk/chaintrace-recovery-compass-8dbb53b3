@@ -50,13 +50,13 @@ const certifications: [string, string][] = [
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Cyber Justice — Digital Forensics & Investigations" },
+      { title: "Cyber Justice — Recovery Forensics & Investigations" },
       {
         name: "description",
         content:
           "Crypto tracing, cyber intelligence and clear evidence documentation for individuals, businesses and legal professionals.",
       },
-      { property: "og:title", content: "Cyber Justice — Digital Forensics & Investigations" },
+      { property: "og:title", content: "Cyber Justice — Recovery Forensics & Investigations" },
       {
         property: "og:description",
         content: "Evidence-led digital research with clear records and realistic next steps.",

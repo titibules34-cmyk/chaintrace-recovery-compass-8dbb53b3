@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 const WORDS = ["digital", "tracing", "intelligence", "recovery"];
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Globe, Users, Monitor, DollarSign, Code2, BarChart3, MapPin, Lock, ShieldCheck, ArrowRight, Phone, Clock, Send } from "lucide-react";
+import { Globe, Users, Monitor, DollarSign, Code2, BarChart3, MapPin, Lock, ShieldCheck, ArrowRight, Phone, Clock, Send, ChevronDown } from "lucide-react";
 import certAcfeCfe from "@/assets/certs/acfe-cfe.png";
 import certTali from "@/assets/certs/tali.png";
 import certCyberExpert from "@/assets/certs/cyber-expert.png";
@@ -202,6 +202,7 @@ const contactCards = [
 
 function Index() {
   const [word, setWord] = useState(0);
+  const [servicesOpen, setServicesOpen] = useState(false);
   useEffect(() => {
     const t = setInterval(() => setWord((w) => (w + 1) % WORDS.length), 2200);
     return () => clearInterval(t);
@@ -214,7 +215,27 @@ function Index() {
           CYBER <span className="text-accent">JUSTICE</span>
         </a>
         <nav className="flex items-center gap-5 text-sm text-muted-foreground">
-          <a href="#services" className="hidden hover:text-foreground sm:inline">Services</a>
+          <div className="relative hidden sm:block">
+            <button
+              type="button"
+              aria-expanded={servicesOpen}
+              aria-controls="services-menu"
+              onClick={() => setServicesOpen((open) => !open)}
+              className="inline-flex items-center gap-1.5 py-2 transition hover:text-foreground"
+            >
+              Services
+              <ChevronDown className={`h-4 w-4 transition-transform ${servicesOpen ? "rotate-180" : ""}`} aria-hidden="true" />
+            </button>
+            {servicesOpen && (
+              <div id="services-menu" className="absolute right-0 top-full mt-2 w-72 overflow-hidden rounded-xl border border-border bg-card p-2 shadow-xl">
+                <Link onClick={() => setServicesOpen(false)} to="/asset-recovery" className="block rounded-lg px-3 py-2.5 text-sm transition hover:bg-secondary hover:text-foreground">Asset Tracing &amp; Investigations</Link>
+                <Link onClick={() => setServicesOpen(false)} to="/cyber-intelligence" className="block rounded-lg px-3 py-2.5 text-sm transition hover:bg-secondary hover:text-foreground">Cyber Intelligence Services</Link>
+                <Link onClick={() => setServicesOpen(false)} to="/cyber-investigation-team" className="block rounded-lg px-3 py-2.5 text-sm transition hover:bg-secondary hover:text-foreground">Cyber Investigation Team</Link>
+                <Link onClick={() => setServicesOpen(false)} to="/cryptocurrency-tracing" className="block rounded-lg px-3 py-2.5 text-sm transition hover:bg-secondary hover:text-foreground">Cryptocurrency Tracing</Link>
+                <a onClick={() => setServicesOpen(false)} href="#services" className="mt-1 block border-t border-border px-3 py-2.5 text-sm font-semibold text-accent transition hover:text-foreground">View all services <span aria-hidden="true">→</span></a>
+              </div>
+            )}
+          </div>
           <a href="#offices" className="hidden hover:text-foreground sm:inline">Offices</a>
           <a href="#contact" className="rounded-full bg-primary px-4 py-1.5 font-semibold text-primary-foreground">Contact</a>
         </nav>

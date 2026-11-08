@@ -362,6 +362,35 @@ function Index() {
         </div>
       </section>
 
+      <section id="reviews" className="border-y border-border bg-card/40 py-20">
+        <div className="mx-auto w-[min(100%-2rem,64rem)]">
+          <div className="text-center">
+            <p className="eyebrow">Client Feedback</p>
+            <h2 className="mt-3 text-3xl font-extrabold sm:text-4xl">Support Through Every Step of Recovery</h2>
+            <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
+              Clear communication, careful investigation and practical guidance matter when dealing with a difficult recovery situation.
+            </p>
+          </div>
+          <div className="mt-10 grid gap-5 md:grid-cols-3">
+            <article className="rounded-2xl border border-border bg-background p-6">
+              <p className="text-sm leading-relaxed text-muted-foreground">“The process was explained clearly from the beginning. I appreciated having the findings and next steps set out in a way I could understand.”</p>
+              <p className="mt-5 text-sm font-bold">Illustrative review</p>
+              <p className="mt-1 text-xs text-muted-foreground">Sample wording — replace with verified client feedback</p>
+            </article>
+            <article className="rounded-2xl border border-border bg-background p-6">
+              <p className="text-sm leading-relaxed text-muted-foreground">“The team took the time to review the transaction details carefully and kept communication professional and consistent throughout.”</p>
+              <p className="mt-5 text-sm font-bold">Illustrative review</p>
+              <p className="mt-1 text-xs text-muted-foreground">Sample wording — replace with verified client feedback</p>
+            </article>
+            <article className="rounded-2xl border border-border bg-background p-6">
+              <p className="text-sm leading-relaxed text-muted-foreground">“I valued the honest advice and realistic explanation of what the evidence could establish. The guidance helped me understand my options.”</p>
+              <p className="mt-5 text-sm font-bold">Illustrative review</p>
+              <p className="mt-1 text-xs text-muted-foreground">Sample wording — replace with verified client feedback</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section id="services" className="mx-auto w-[min(100%-2rem,64rem)] py-20">
         <p className="eyebrow">Services</p>
         <h2 className="mt-3 text-3xl font-extrabold">Focused capabilities, clear boundaries.</h2>
@@ -436,76 +465,6 @@ function Index() {
               <p className="mt-2 text-sm text-muted-foreground">{text}</p>
             </article>
           ))}
-        </div>
-      </section>
-
-      <section id="offices" className="mx-auto w-[min(100%-2rem,64rem)] py-20">
-        <div className="text-center">
-          <p className="eyebrow">Global Network</p>
-          <h2 className="mt-3 text-3xl font-extrabold sm:text-4xl">Our Office Locations</h2>
-          <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
-            Strategic investigative presence coordinating cross-border operations worldwide.
-          </p>
-        </div>
-
-        <div className="mt-12 grid overflow-hidden rounded-2xl border border-border bg-card lg:grid-cols-2">
-          <div className="flex flex-col gap-5 p-8 sm:p-10">
-            <div className="flex flex-wrap gap-2">
-              <span className="inline-flex items-center gap-1.5 rounded-full border border-accent/40 bg-accent/10 px-3 py-1 text-xs font-bold tracking-wide text-accent">
-                <span className="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden="true" />
-                Active Operational Headquarters
-              </span>
-              <span className="rounded-full border border-border bg-secondary px-3 py-1 text-xs font-bold tracking-wide text-muted-foreground">
-                United Kingdom
-              </span>
-            </div>
-            <div>
-              <h3 className="text-2xl font-extrabold">Cyber Justice Ltd</h3>
-              <p className="mt-1 text-sm font-semibold text-accent">Registered Office &amp; Global Investigations Command</p>
-              <p className="mt-3 flex items-center gap-2 text-lg font-bold">
-                <MapPin className="h-5 w-5 text-accent" aria-hidden="true" />
-                London, United Kingdom
-              </p>
-            </div>
-            <div className="flex items-start gap-4 rounded-xl border border-border bg-background/60 p-5">
-              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-accent">
-                <MapPin className="h-5 w-5" aria-hidden="true" />
-              </span>
-              <div>
-                <p className="text-xs font-bold tracking-widest text-muted-foreground">Official Registered Address</p>
-                <p className="mt-1 text-sm font-semibold leading-relaxed">
-                  Unit A1008, 4-6 Greatorex Street, London, United Kingdom, E1 5NF
-                </p>
-              </div>
-            </div>
-            <dl className="mt-auto divide-y divide-border border-t border-border text-sm">
-              {companyFacts.map(([label, value]) => (
-                <div key={label} className="flex items-center justify-between gap-4 py-3">
-                  <dt className="text-muted-foreground">{label}</dt>
-                  <dd className="font-semibold">{value}</dd>
-                </div>
-              ))}
-            </dl>
-          </div>
-
-          <div className="flex flex-col gap-4 border-t border-border bg-background/40 p-8 sm:p-10 lg:border-l lg:border-t-0">
-            <h3 className="text-lg font-bold">Operational Scope &amp; Forensic Standards</h3>
-            {standards.map(({ icon: Icon, title, text }) => (
-              <div key={title} className="flex items-start gap-4 rounded-xl border border-border bg-card p-5 transition hover:border-primary">
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-accent">
-                  <Icon className="h-5 w-5" aria-hidden="true" />
-                </span>
-                <div>
-                  <p className="font-semibold">{title}</p>
-                  <p className="mt-1 text-sm text-muted-foreground">{text}</p>
-                </div>
-              </div>
-            ))}
-            <a href="#contact" className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-glow">
-              Connect With Our Headquarters
-              <ArrowRight className="h-4 w-4" aria-hidden="true" />
-            </a>
-          </div>
         </div>
       </section>
 
@@ -658,9 +617,9 @@ function Index() {
           <nav aria-label="Quick links">
             <p className="eyebrow">Quick Links</p>
             <ul className="mt-4 flex flex-col gap-2.5 text-sm text-muted-foreground">
+              <li><a href="#reviews" className="hover:text-foreground">Reviews</a></li>
               <li><a href="#services" className="hover:text-foreground">All Services</a></li>
               <li><a href="#tools" className="hover:text-foreground">Cyber Tools</a></li>
-              <li><a href="#offices" className="hover:text-foreground">Our Offices</a></li>
               <li><a href="#contact" className="hover:text-foreground">Contact Us</a></li>
             </ul>
           </nav>

@@ -215,7 +215,17 @@ function Index() {
           CYBER <span className="text-accent">JUSTICE</span>
         </a>
         <nav className="flex items-center gap-2 text-sm text-muted-foreground sm:gap-5">
-          <div className="relative">
+          <div
+            className="relative"
+            onMouseEnter={() => setServicesOpen(true)}
+            onMouseLeave={() => setServicesOpen(false)}
+            onFocusCapture={() => setServicesOpen(true)}
+            onBlurCapture={(event) => {
+              if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
+                setServicesOpen(false);
+              }
+            }}
+          >
             <button
               type="button"
               aria-expanded={servicesOpen}
@@ -226,11 +236,15 @@ function Index() {
               Services
               <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${servicesOpen ? "rotate-180" : ""}`} aria-hidden="true" />
             </button>
-            {servicesOpen && (
-              <div
-                id="services-menu"
-                className="absolute right-0 top-full z-50 mt-3 w-[min(22rem,calc(100vw-2rem))] overflow-hidden rounded-2xl border border-border bg-card/95 p-3 shadow-2xl backdrop-blur-xl"
-              >
+            <div
+              id="services-menu"
+              aria-hidden={!servicesOpen}
+              className={`absolute right-0 top-full z-50 mt-3 w-[min(22rem,calc(100vw-2rem))] origin-top-right overflow-hidden rounded-2xl border border-border bg-card/95 p-3 shadow-2xl backdrop-blur-xl transition-[opacity,transform,visibility] duration-300 ease-out before:absolute before:-top-3 before:inset-x-0 before:h-3 ${
+                servicesOpen
+                  ? "visible translate-y-0 scale-100 opacity-100"
+                  : "invisible -translate-y-2 scale-95 opacity-0 pointer-events-none"
+              }`}
+            >
                 <div className="rounded-xl bg-primary/10 px-4 py-3">
                   <p className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-accent">Our expertise</p>
                   <p className="mt-1 text-base font-bold text-foreground">Investigation starts here.</p>
@@ -261,8 +275,7 @@ function Index() {
                 <a onClick={() => setServicesOpen(false)} href="#services" className="mt-2 flex items-center justify-between rounded-xl border border-border px-4 py-3 text-xs font-bold text-accent transition hover:border-accent/50 hover:bg-secondary">
                   Explore all capabilities <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </a>
-              </div>
-            )}
+            </div>
           </div>
           <a href="#offices" className="hidden rounded-full px-3 py-2 transition hover:bg-secondary hover:text-foreground sm:inline">Offices</a>
           <a href="#contact" className="rounded-full bg-primary px-4 py-2 font-semibold text-primary-foreground shadow-glow transition hover:-translate-y-0.5 hover:opacity-90">Contact</a>

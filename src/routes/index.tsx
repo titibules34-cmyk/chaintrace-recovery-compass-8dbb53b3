@@ -214,30 +214,58 @@ function Index() {
         <a href="#top" className="text-sm font-extrabold tracking-widest">
           CYBER <span className="text-accent">JUSTICE</span>
         </a>
-        <nav className="flex items-center gap-5 text-sm text-muted-foreground">
-          <div className="relative hidden sm:block">
+        <nav className="flex items-center gap-2 text-sm text-muted-foreground sm:gap-5">
+          <div className="relative">
             <button
               type="button"
               aria-expanded={servicesOpen}
               aria-controls="services-menu"
               onClick={() => setServicesOpen((open) => !open)}
-              className="inline-flex items-center gap-1.5 py-2 transition hover:text-foreground"
+              className={`inline-flex items-center gap-2 rounded-full px-3 py-2 font-semibold transition hover:bg-secondary hover:text-foreground sm:px-4 ${servicesOpen ? "bg-secondary text-foreground" : ""}`}
             >
               Services
-              <ChevronDown className={`h-4 w-4 transition-transform ${servicesOpen ? "rotate-180" : ""}`} aria-hidden="true" />
+              <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${servicesOpen ? "rotate-180" : ""}`} aria-hidden="true" />
             </button>
             {servicesOpen && (
-              <div id="services-menu" className="absolute right-0 top-full mt-2 w-72 overflow-hidden rounded-xl border border-border bg-card p-2 shadow-xl">
-                <Link onClick={() => setServicesOpen(false)} to="/asset-recovery" className="block rounded-lg px-3 py-2.5 text-sm transition hover:bg-secondary hover:text-foreground">Asset Tracing &amp; Investigations</Link>
-                <Link onClick={() => setServicesOpen(false)} to="/cyber-intelligence" className="block rounded-lg px-3 py-2.5 text-sm transition hover:bg-secondary hover:text-foreground">Cyber Intelligence Services</Link>
-                <Link onClick={() => setServicesOpen(false)} to="/cyber-investigation-team" className="block rounded-lg px-3 py-2.5 text-sm transition hover:bg-secondary hover:text-foreground">Cyber Investigation Team</Link>
-                <Link onClick={() => setServicesOpen(false)} to="/cryptocurrency-tracing" className="block rounded-lg px-3 py-2.5 text-sm transition hover:bg-secondary hover:text-foreground">Cryptocurrency Tracing</Link>
-                <a onClick={() => setServicesOpen(false)} href="#services" className="mt-1 block border-t border-border px-3 py-2.5 text-sm font-semibold text-accent transition hover:text-foreground">View all services <span aria-hidden="true">→</span></a>
+              <div
+                id="services-menu"
+                className="absolute right-0 top-full z-50 mt-3 w-[min(22rem,calc(100vw-2rem))] overflow-hidden rounded-2xl border border-border bg-card/95 p-3 shadow-2xl backdrop-blur-xl"
+              >
+                <div className="rounded-xl bg-primary/10 px-4 py-3">
+                  <p className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-accent">Our expertise</p>
+                  <p className="mt-1 text-base font-bold text-foreground">Investigation starts here.</p>
+                  <p className="mt-1 text-xs leading-relaxed text-muted-foreground">Explore our specialist tracing and intelligence services.</p>
+                </div>
+                <div className="mt-2 grid gap-1">
+                  <Link onClick={() => setServicesOpen(false)} to="/asset-recovery" className="group flex items-center gap-3 rounded-xl p-3 transition hover:bg-secondary">
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-accent transition group-hover:bg-primary group-hover:text-primary-foreground"><DollarSign className="h-5 w-5" aria-hidden="true" /></span>
+                    <span className="min-w-0 flex-1"><span className="block text-sm font-semibold text-foreground">Asset Tracing &amp; Investigations</span><span className="mt-0.5 block text-xs text-muted-foreground">Follow assets and build an evidence trail</span></span>
+                    <ArrowRight className="h-4 w-4 shrink-0 text-muted-foreground transition group-hover:translate-x-1 group-hover:text-accent" aria-hidden="true" />
+                  </Link>
+                  <Link onClick={() => setServicesOpen(false)} to="/cyber-intelligence" className="group flex items-center gap-3 rounded-xl p-3 transition hover:bg-secondary">
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-accent transition group-hover:bg-primary group-hover:text-primary-foreground"><Globe className="h-5 w-5" aria-hidden="true" /></span>
+                    <span className="min-w-0 flex-1"><span className="block text-sm font-semibold text-foreground">Cyber Intelligence Services</span><span className="mt-0.5 block text-xs text-muted-foreground">OSINT, HUMINT and digital research</span></span>
+                    <ArrowRight className="h-4 w-4 shrink-0 text-muted-foreground transition group-hover:translate-x-1 group-hover:text-accent" aria-hidden="true" />
+                  </Link>
+                  <Link onClick={() => setServicesOpen(false)} to="/cyber-investigation-team" className="group flex items-center gap-3 rounded-xl p-3 transition hover:bg-secondary">
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-accent transition group-hover:bg-primary group-hover:text-primary-foreground"><ShieldCheck className="h-5 w-5" aria-hidden="true" /></span>
+                    <span className="min-w-0 flex-1"><span className="block text-sm font-semibold text-foreground">Cyber Investigation Team</span><span className="mt-0.5 block text-xs text-muted-foreground">Specialist digital investigations</span></span>
+                    <ArrowRight className="h-4 w-4 shrink-0 text-muted-foreground transition group-hover:translate-x-1 group-hover:text-accent" aria-hidden="true" />
+                  </Link>
+                  <Link onClick={() => setServicesOpen(false)} to="/cryptocurrency-tracing" className="group flex items-center gap-3 rounded-xl p-3 transition hover:bg-secondary">
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-accent transition group-hover:bg-primary group-hover:text-primary-foreground"><BarChart3 className="h-5 w-5" aria-hidden="true" /></span>
+                    <span className="min-w-0 flex-1"><span className="block text-sm font-semibold text-foreground">Cryptocurrency Tracing</span><span className="mt-0.5 block text-xs text-muted-foreground">Trace on-chain transactions and flows</span></span>
+                    <ArrowRight className="h-4 w-4 shrink-0 text-muted-foreground transition group-hover:translate-x-1 group-hover:text-accent" aria-hidden="true" />
+                  </Link>
+                </div>
+                <a onClick={() => setServicesOpen(false)} href="#services" className="mt-2 flex items-center justify-between rounded-xl border border-border px-4 py-3 text-xs font-bold text-accent transition hover:border-accent/50 hover:bg-secondary">
+                  Explore all capabilities <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                </a>
               </div>
             )}
           </div>
-          <a href="#offices" className="hidden hover:text-foreground sm:inline">Offices</a>
-          <a href="#contact" className="rounded-full bg-primary px-4 py-1.5 font-semibold text-primary-foreground">Contact</a>
+          <a href="#offices" className="hidden rounded-full px-3 py-2 transition hover:bg-secondary hover:text-foreground sm:inline">Offices</a>
+          <a href="#contact" className="rounded-full bg-primary px-4 py-2 font-semibold text-primary-foreground shadow-glow transition hover:-translate-y-0.5 hover:opacity-90">Contact</a>
         </nav>
       </header>
 

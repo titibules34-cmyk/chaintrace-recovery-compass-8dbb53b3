@@ -210,9 +210,8 @@ function Index() {
   return (
     <main className="min-h-screen">
       <header className="fixed inset-x-0 top-4 z-50 mx-auto flex w-[min(100%-2rem,64rem)] items-center justify-between rounded-full border border-border bg-background/70 px-5 py-2.5 backdrop-blur">
-        <a href="#top" className="flex items-center gap-3 text-sm font-extrabold tracking-widest">
-          <img src="/assets/cyber-justice-logo.png" alt="Cyber Justice logo" className="h-9 w-auto object-contain" />
-          <span>CYBER <span className="text-accent">JUSTICE</span></span>
+        <a href="#top" className="text-sm font-extrabold tracking-widest">
+          CYBER <span className="text-accent">JUSTICE</span>
         </a>
         <nav className="flex items-center gap-5 text-sm text-muted-foreground">
           <a href="#services" className="hidden hover:text-foreground sm:inline">Services</a>

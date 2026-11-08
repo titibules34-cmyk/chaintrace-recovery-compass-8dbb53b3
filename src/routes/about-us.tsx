@@ -129,9 +129,9 @@ function AboutUs() {
             <h2 className="text-xl font-extrabold text-white sm:text-2xl">Need clarity on a digital investigation?</h2>
             <p className="mt-2 text-sm text-blue-100/65">Speak with our team about your situation and the evidence available.</p>
           </div>
-          <Link to="/" hash="contact" className="inline-flex shrink-0 items-center gap-2 rounded-full bg-cyan-300 px-6 py-3 text-sm font-bold text-slate-950 shadow-[0_8px_30px_rgba(34,211,238,.2)] transition hover:-translate-y-0.5 hover:bg-cyan-200">
+          <a href="/#contact" className="inline-flex shrink-0 items-center gap-2 rounded-full bg-cyan-300 px-6 py-3 text-sm font-bold text-slate-950 shadow-[0_8px_30px_rgba(34,211,238,.2)] transition hover:-translate-y-0.5 hover:bg-cyan-200">
             Contact Cyber Justice <ArrowRight className="h-4 w-4" />
-          </Link>
+          </a>
         </div>
       </section>
     </main>

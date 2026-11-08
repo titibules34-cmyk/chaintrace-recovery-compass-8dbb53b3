@@ -208,15 +208,15 @@ function AboutUs() {
               <article key={title} className={`group relative flex min-h-[22rem] flex-col overflow-hidden rounded-[1.75rem] border border-blue-200/15 bg-white/[.055] p-6 shadow-[0_18px_60px_rgba(0,0,0,.16)] backdrop-blur-xl transition duration-500 hover:-translate-y-1 hover:border-cyan-300/40 hover:bg-white/[.085] sm:p-8 about-rise about-delay-${index + 1}`}>
                 <div className="pointer-events-none absolute -right-16 -top-20 h-52 w-52 rounded-full bg-cyan-400/[.07] blur-3xl transition duration-500 group-hover:bg-cyan-300/[.14]" />
                 <div className="relative flex items-center justify-between gap-4">
-                  <span className="flex h-8 w-8 items-center justify-center rounded-xl border border-cyan-200/15 bg-cyan-300/10 text-cyan-200 transition duration-300 group-hover:scale-110 group-hover:bg-cyan-300/15">
-                    <Icon className="h-4 w-4" />
+                  <span className="flex h-6 w-6 items-center justify-center rounded-lg border border-cyan-200/15 bg-cyan-300/10 text-cyan-200 transition duration-300 group-hover:scale-110 group-hover:bg-cyan-300/15">
+                    <Icon className="h-3 w-3" />
                   </span>
                   <span className="rounded-full border border-blue-200/15 bg-blue-300/[.08] px-3 py-1.5 text-[.58rem] font-bold tracking-[.13em] text-cyan-100/90">{tag}</span>
                 </div>
                 <div className="relative flex flex-1 flex-col justify-end pt-10">
-                  <div className="mb-4 flex h-14 items-center justify-center">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-cyan-200/15 bg-gradient-to-br from-cyan-300/15 to-blue-500/10 text-cyan-200 shadow-[0_0_50px_rgba(34,211,238,.08)] transition duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-[0_0_55px_rgba(34,211,238,.18)]">
-                      <Icon className="h-6 w-6 stroke-[1.5]" />
+                  <div className="mb-3 flex h-10 items-center justify-center">
+                    <div className="flex h-9 w-9 items-center justify-center rounded-lg border border-cyan-200/15 bg-gradient-to-br from-cyan-300/15 to-blue-500/10 text-cyan-200 shadow-[0_0_50px_rgba(34,211,238,.08)] transition duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-[0_0_55px_rgba(34,211,238,.18)]">
+                      <Icon className="h-4 w-4 stroke-[1.6]" />
                     </div>
                   </div>
                   <h3 className="text-xl font-bold text-white">{title}</h3>

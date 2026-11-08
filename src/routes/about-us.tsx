@@ -20,7 +20,6 @@ import certDuns from "@/assets/certs/duns.png";
 import certDmca from "@/assets/certs/dmca.png";
 import certAcfeMember from "@/assets/certs/acfe-member.png";
 import certAuthorizeNet from "@/assets/certs/authorize-net.png";
-import worldMapBg from "@/assets/world-map-blue.png.asset.json";
 
 const certifications: [string, string][] = [
   [certAcfeCfe, "Certified Fraud Examiner"],
@@ -111,7 +110,7 @@ function AboutUs() {
         @media (prefers-reduced-motion: reduce) { .about-rise,.about-orb,.about-float { animation:none; opacity:1; } .about-word { animation:none; opacity:0; } .about-word:first-child { opacity:1; } }
       `}</style>
       <div className="pointer-events-none fixed inset-0 -z-10">
-        <img src={worldMapBg.url} alt="" aria-hidden="true" className="h-full w-full object-cover" />
+        <div aria-hidden="true" className="h-full w-full bg-[radial-gradient(ellipse_at_50%_20%,rgba(14,165,233,.24),transparent_58%),linear-gradient(135deg,#07172f_0%,#0b2d55_48%,#061326_100%)]" />
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(6,22,52,.62)_0%,rgba(8,28,64,.72)_55%,rgba(6,20,48,.82)_100%)]" />
       </div>
       <div className="about-grid pointer-events-none absolute inset-0 -z-10" />

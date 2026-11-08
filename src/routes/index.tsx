@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const WORDS = ["recovery", "tracing", "intelligence"];
+const WORDS = ["digital", "tracing", "intelligence", "recovery"];
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Globe, Users, Monitor, DollarSign, Code2, BarChart3, MapPin, Lock, ShieldCheck, ArrowRight, Phone, Clock, Send } from "lucide-react";
 import certAcfeCfe from "@/assets/certs/acfe-cfe.png";

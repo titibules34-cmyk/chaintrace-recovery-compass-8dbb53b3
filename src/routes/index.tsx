@@ -239,7 +239,7 @@ function Index() {
             <div
               id="services-menu"
               aria-hidden={!servicesOpen}
-              className={`absolute right-0 top-full z-50 mt-3 w-[min(22rem,calc(100vw-2rem))] origin-top-right overflow-hidden rounded-2xl border border-border bg-card/95 p-3 shadow-2xl backdrop-blur-xl transition-[opacity,transform,visibility] duration-300 ease-out before:absolute before:-top-3 before:inset-x-0 before:h-3 ${
+              className={`absolute right-0 top-full z-50 w-[min(22rem,calc(100vw-2rem))] origin-top-right overflow-hidden rounded-2xl border border-border bg-card/95 p-3 shadow-2xl backdrop-blur-xl transition-[opacity,transform,visibility] duration-300 ease-out before:absolute before:-top-3 before:inset-x-0 before:h-3 ${
                 servicesOpen
                   ? "visible translate-y-0 scale-100 opacity-100"
                   : "invisible -translate-y-2 scale-95 opacity-0 pointer-events-none"

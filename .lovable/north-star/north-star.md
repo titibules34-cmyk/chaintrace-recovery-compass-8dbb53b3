@@ -2,8 +2,8 @@
 
 # North star
 
-People who lost cryptocurrency get their stolen assets traced and recovered.
+People who lost cryptocurrency to fraud get their funds traced and recovered.
 
 ## Metric
 
-People who submit an evaluation or consultation request each month
+People who submit a case enquiry each month

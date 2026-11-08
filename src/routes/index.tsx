@@ -239,42 +239,94 @@ function Index() {
             <div
               id="services-menu"
               aria-hidden={!servicesOpen}
-              className={`absolute right-0 top-full z-50 w-[min(22rem,calc(100vw-2rem))] origin-top-right overflow-hidden rounded-2xl border border-border bg-card/95 p-3 shadow-2xl backdrop-blur-xl transition-[opacity,transform,visibility] duration-300 ease-out before:absolute before:-top-3 before:inset-x-0 before:h-3 ${
+              className={`absolute right-0 top-full z-50 w-[min(36rem,calc(100vw-2rem))] origin-top-right overflow-hidden rounded-3xl border border-border bg-card/95 p-4 shadow-2xl backdrop-blur-2xl transition-[opacity,transform,visibility] duration-300 ease-out before:absolute before:-top-3 before:inset-x-0 before:h-3 ${
                 servicesOpen
                   ? "visible translate-y-0 scale-100 opacity-100"
-                  : "invisible -translate-y-2 scale-95 opacity-0 pointer-events-none"
+                  : "invisible -translate-y-3 scale-95 opacity-0 pointer-events-none"
               }`}
             >
-                <div className="rounded-xl bg-primary/10 px-4 py-3">
-                  <p className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-accent">Our expertise</p>
-                  <p className="mt-1 text-base font-bold text-foreground">Investigation starts here.</p>
-                  <p className="mt-1 text-xs leading-relaxed text-muted-foreground">Explore our specialist tracing and intelligence services.</p>
+              <div className="flex items-start justify-between gap-4 rounded-2xl bg-primary/10 p-4">
+                <div>
+                  <p className="text-[0.65rem] font-bold uppercase tracking-[0.22em] text-accent">Explore Cyber Justice</p>
+                  <p className="mt-1 text-lg font-extrabold text-foreground">Specialist services &amp; cyber tools</p>
+                  <p className="mt-1 max-w-sm text-xs leading-relaxed text-muted-foreground">Choose an investigation service or explore the intelligence capabilities behind our work.</p>
                 </div>
-                <div className="mt-2 grid gap-1">
-                  <Link onClick={() => setServicesOpen(false)} to="/asset-recovery" className="group flex items-center gap-3 rounded-xl p-3 transition hover:bg-secondary">
+                <span className="hidden h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-accent/20 bg-background/70 text-accent sm:flex">
+                  <ShieldCheck className="h-5 w-5" aria-hidden="true" />
+                </span>
+              </div>
+
+              <div className="mt-4">
+                <div className="mb-2 flex items-center justify-between px-1">
+                  <p className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-muted-foreground">Our services</p>
+                  <span className="text-[0.65rem] text-muted-foreground">04 specialist areas</span>
+                </div>
+                <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+                  <Link onClick={() => setServicesOpen(false)} to="/asset-recovery" className="group flex min-w-0 items-center gap-3 rounded-2xl border border-border/70 bg-background/45 p-3 transition duration-200 hover:-translate-y-0.5 hover:border-accent/40 hover:bg-secondary">
                     <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-accent transition group-hover:bg-primary group-hover:text-primary-foreground"><DollarSign className="h-5 w-5" aria-hidden="true" /></span>
-                    <span className="min-w-0 flex-1"><span className="block text-sm font-semibold text-foreground">Asset Tracing &amp; Investigations</span><span className="mt-0.5 block text-xs text-muted-foreground">Follow assets and build an evidence trail</span></span>
+                    <span className="min-w-0 flex-1"><span className="block text-xs font-bold text-foreground">Asset Tracing &amp; Investigations</span><span className="mt-1 block text-[0.68rem] text-muted-foreground">Follow assets and build an evidence trail</span></span>
                     <ArrowRight className="h-4 w-4 shrink-0 text-muted-foreground transition group-hover:translate-x-1 group-hover:text-accent" aria-hidden="true" />
                   </Link>
-                  <Link onClick={() => setServicesOpen(false)} to="/cyber-intelligence" className="group flex items-center gap-3 rounded-xl p-3 transition hover:bg-secondary">
+                  <Link onClick={() => setServicesOpen(false)} to="/cyber-intelligence" className="group flex min-w-0 items-center gap-3 rounded-2xl border border-border/70 bg-background/45 p-3 transition duration-200 hover:-translate-y-0.5 hover:border-accent/40 hover:bg-secondary">
                     <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-accent transition group-hover:bg-primary group-hover:text-primary-foreground"><Globe className="h-5 w-5" aria-hidden="true" /></span>
-                    <span className="min-w-0 flex-1"><span className="block text-sm font-semibold text-foreground">Cyber Intelligence Services</span><span className="mt-0.5 block text-xs text-muted-foreground">OSINT, HUMINT and digital research</span></span>
+                    <span className="min-w-0 flex-1"><span className="block text-xs font-bold text-foreground">Cyber Intelligence Services</span><span className="mt-1 block text-[0.68rem] text-muted-foreground">OSINT, HUMINT and digital research</span></span>
                     <ArrowRight className="h-4 w-4 shrink-0 text-muted-foreground transition group-hover:translate-x-1 group-hover:text-accent" aria-hidden="true" />
                   </Link>
-                  <Link onClick={() => setServicesOpen(false)} to="/cyber-investigation-team" className="group flex items-center gap-3 rounded-xl p-3 transition hover:bg-secondary">
+                  <Link onClick={() => setServicesOpen(false)} to="/cyber-investigation-team" className="group flex min-w-0 items-center gap-3 rounded-2xl border border-border/70 bg-background/45 p-3 transition duration-200 hover:-translate-y-0.5 hover:border-accent/40 hover:bg-secondary">
                     <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-accent transition group-hover:bg-primary group-hover:text-primary-foreground"><ShieldCheck className="h-5 w-5" aria-hidden="true" /></span>
-                    <span className="min-w-0 flex-1"><span className="block text-sm font-semibold text-foreground">Cyber Investigation Team</span><span className="mt-0.5 block text-xs text-muted-foreground">Specialist digital investigations</span></span>
+                    <span className="min-w-0 flex-1"><span className="block text-xs font-bold text-foreground">Cyber Investigation Team</span><span className="mt-1 block text-[0.68rem] text-muted-foreground">Specialist digital investigations</span></span>
                     <ArrowRight className="h-4 w-4 shrink-0 text-muted-foreground transition group-hover:translate-x-1 group-hover:text-accent" aria-hidden="true" />
                   </Link>
-                  <Link onClick={() => setServicesOpen(false)} to="/cryptocurrency-tracing" className="group flex items-center gap-3 rounded-xl p-3 transition hover:bg-secondary">
+                  <Link onClick={() => setServicesOpen(false)} to="/cryptocurrency-tracing" className="group flex min-w-0 items-center gap-3 rounded-2xl border border-border/70 bg-background/45 p-3 transition duration-200 hover:-translate-y-0.5 hover:border-accent/40 hover:bg-secondary">
                     <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-accent transition group-hover:bg-primary group-hover:text-primary-foreground"><BarChart3 className="h-5 w-5" aria-hidden="true" /></span>
-                    <span className="min-w-0 flex-1"><span className="block text-sm font-semibold text-foreground">Cryptocurrency Tracing</span><span className="mt-0.5 block text-xs text-muted-foreground">Trace on-chain transactions and flows</span></span>
+                    <span className="min-w-0 flex-1"><span className="block text-xs font-bold text-foreground">Cryptocurrency Tracing</span><span className="mt-1 block text-[0.68rem] text-muted-foreground">Trace on-chain transactions and flows</span></span>
                     <ArrowRight className="h-4 w-4 shrink-0 text-muted-foreground transition group-hover:translate-x-1 group-hover:text-accent" aria-hidden="true" />
                   </Link>
                 </div>
-                <a onClick={() => setServicesOpen(false)} href="#services" className="mt-2 flex items-center justify-between rounded-xl border border-border px-4 py-3 text-xs font-bold text-accent transition hover:border-accent/50 hover:bg-secondary">
-                  Explore all capabilities <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                </a>
+              </div>
+
+              <div className="mt-4 border-t border-border pt-4">
+                <div className="mb-2 flex items-center justify-between px-1">
+                  <p className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-muted-foreground">Cyber tools</p>
+                  <span className="text-[0.65rem] text-muted-foreground">Intelligence capabilities</span>
+                </div>
+                <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
+                  <a onClick={() => setServicesOpen(false)} href="#tools" className="group rounded-2xl border border-border/70 bg-background/45 p-3 transition duration-200 hover:-translate-y-0.5 hover:border-accent/40 hover:bg-secondary">
+                    <Globe className="h-5 w-5 text-accent transition group-hover:scale-110" aria-hidden="true" />
+                    <span className="mt-2 block text-xs font-bold text-foreground">Open Intelligence</span>
+                    <span className="mt-1 block text-[0.65rem] text-muted-foreground">OSINT research</span>
+                  </a>
+                  <a onClick={() => setServicesOpen(false)} href="#tools" className="group rounded-2xl border border-border/70 bg-background/45 p-3 transition duration-200 hover:-translate-y-0.5 hover:border-accent/40 hover:bg-secondary">
+                    <Users className="h-5 w-5 text-accent transition group-hover:scale-110" aria-hidden="true" />
+                    <span className="mt-2 block text-xs font-bold text-foreground">Human Intelligence</span>
+                    <span className="mt-1 block text-[0.65rem] text-muted-foreground">HUMINT sourcing</span>
+                  </a>
+                  <a onClick={() => setServicesOpen(false)} href="#tools" className="group rounded-2xl border border-border/70 bg-background/45 p-3 transition duration-200 hover:-translate-y-0.5 hover:border-accent/40 hover:bg-secondary">
+                    <Monitor className="h-5 w-5 text-accent transition group-hover:scale-110" aria-hidden="true" />
+                    <span className="mt-2 block text-xs font-bold text-foreground">Cyber Intelligence</span>
+                    <span className="mt-1 block text-[0.65rem] text-muted-foreground">CYBINT analysis</span>
+                  </a>
+                  <a onClick={() => setServicesOpen(false)} href="#tools" className="group rounded-2xl border border-border/70 bg-background/45 p-3 transition duration-200 hover:-translate-y-0.5 hover:border-accent/40 hover:bg-secondary">
+                    <DollarSign className="h-5 w-5 text-accent transition group-hover:scale-110" aria-hidden="true" />
+                    <span className="mt-2 block text-xs font-bold text-foreground">Financial Intelligence</span>
+                    <span className="mt-1 block text-[0.65rem] text-muted-foreground">FININT research</span>
+                  </a>
+                  <a onClick={() => setServicesOpen(false)} href="#tools" className="group rounded-2xl border border-border/70 bg-background/45 p-3 transition duration-200 hover:-translate-y-0.5 hover:border-accent/40 hover:bg-secondary">
+                    <Code2 className="h-5 w-5 text-accent transition group-hover:scale-110" aria-hidden="true" />
+                    <span className="mt-2 block text-xs font-bold text-foreground">Investigative Software</span>
+                    <span className="mt-1 block text-[0.65rem] text-muted-foreground">Digital case tools</span>
+                  </a>
+                  <a onClick={() => setServicesOpen(false)} href="#tools" className="group rounded-2xl border border-border/70 bg-background/45 p-3 transition duration-200 hover:-translate-y-0.5 hover:border-accent/40 hover:bg-secondary">
+                    <BarChart3 className="h-5 w-5 text-accent transition group-hover:scale-110" aria-hidden="true" />
+                    <span className="mt-2 block text-xs font-bold text-foreground">Intelligence Analysis</span>
+                    <span className="mt-1 block text-[0.65rem] text-muted-foreground">Evidence correlation</span>
+                  </a>
+                </div>
+              </div>
+
+              <a onClick={() => setServicesOpen(false)} href="#services" className="mt-3 flex items-center justify-between rounded-xl px-2 py-2 text-xs font-bold text-accent transition hover:bg-secondary">
+                Explore all capabilities <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              </a>
             </div>
           </div>
           <a href="#offices" className="hidden rounded-full px-3 py-2 transition hover:bg-secondary hover:text-foreground sm:inline">Offices</a>

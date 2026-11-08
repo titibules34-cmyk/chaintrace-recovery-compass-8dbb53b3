@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowLeft, ArrowRight, Scale, ShieldCheck, Search, Network, FileCheck2 } from "lucide-react";
+import { ArrowLeft, ArrowRight, Scale, ShieldCheck, Search, Network, FileCheck2, Globe, DollarSign, ScanSearch } from "lucide-react";
 
 export const Route = createFileRoute("/about-us")({
   head: () => ({
@@ -17,6 +17,13 @@ const principles = [
   { icon: Search, title: "Intelligence-led research", text: "OSINT, HUMINT, cyber and financial intelligence help build a clearer picture from fragmented digital information." },
   { icon: Network, title: "Connected investigations", text: "We examine relationships between wallets, transactions, entities and digital activity to develop useful investigative leads." },
   { icon: FileCheck2, title: "Evidence with context", text: "Findings are organised into clear timelines and documented material so clients and professional advisers can assess the next steps." },
+];
+
+const capabilities = [
+  { icon: ShieldCheck, tag: "DIGITAL INVESTIGATIONS", title: "Cyber Investigations", text: "We examine suspicious online activity, digital footprints and connected entities to help establish what happened and identify useful investigative leads." },
+  { icon: DollarSign, tag: "BLOCKCHAIN FORENSICS", title: "Digital Asset Tracing", text: "We analyse blockchain transactions, wallet activity and asset movements to map flows and help identify where digital funds may have travelled." },
+  { icon: Globe, tag: "OSINT & HUMINT", title: "Open Source Intelligence", text: "We bring together relevant public-source research and human intelligence enquiries to develop context, verify information and support investigations." },
+  { icon: ScanSearch, tag: "RECOVERY INTELLIGENCE", title: "Intelligence for Asset Recovery", text: "We organise investigative findings into clear leads and documented intelligence to help clients and their legal advisers consider informed next steps." },
 ];
 
 const metrics = [
@@ -119,6 +126,40 @@ function AboutUs() {
                 <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-300/10 text-cyan-200"><Icon className="h-5 w-5" /></span>
                 <h3 className="mt-5 font-bold text-white">{title}</h3>
                 <p className="mt-2 text-sm leading-6 text-blue-100/65">{text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+
+        <section className="about-rise mt-20 sm:mt-24">
+          <div className="text-center">
+            <p className="text-[.68rem] font-bold tracking-[.22em] text-cyan-200">INVESTIGATIVE &amp; FORENSIC CAPABILITIES</p>
+            <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-white sm:text-5xl">Specialist Capabilities</h2>
+            <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-blue-100/65 sm:text-base">
+              Combining investigative methods, digital forensics and cross-border intelligence to bring clarity to complex cases.
+            </p>
+          </div>
+          <div className="mt-10 grid gap-5 md:grid-cols-2">
+            {capabilities.map(({ icon: Icon, tag, title, text }, index) => (
+              <article key={title} className={`group relative flex min-h-[22rem] flex-col overflow-hidden rounded-[1.75rem] border border-blue-200/15 bg-white/[.055] p-6 shadow-[0_18px_60px_rgba(0,0,0,.16)] backdrop-blur-xl transition duration-500 hover:-translate-y-1 hover:border-cyan-300/40 hover:bg-white/[.085] sm:p-8 about-rise about-delay-${index + 1}`}>
+                <div className="pointer-events-none absolute -right-16 -top-20 h-52 w-52 rounded-full bg-cyan-400/[.07] blur-3xl transition duration-500 group-hover:bg-cyan-300/[.14]" />
+                <div className="relative flex items-center justify-between gap-4">
+                  <span className="flex h-11 w-11 items-center justify-center rounded-2xl border border-cyan-200/15 bg-cyan-300/10 text-cyan-200 transition duration-300 group-hover:scale-110 group-hover:bg-cyan-300/15">
+                    <Icon className="h-5 w-5" />
+                  </span>
+                  <span className="rounded-full border border-blue-200/15 bg-blue-300/[.08] px-3 py-1.5 text-[.58rem] font-bold tracking-[.13em] text-cyan-100/90">{tag}</span>
+                </div>
+                <div className="relative flex flex-1 flex-col justify-end pt-10">
+                  <div className="mb-6 flex h-24 items-center justify-center">
+                    <div className="flex h-20 w-20 items-center justify-center rounded-[1.6rem] border border-cyan-200/15 bg-gradient-to-br from-cyan-300/15 to-blue-500/10 text-cyan-200 shadow-[0_0_50px_rgba(34,211,238,.08)] transition duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-[0_0_55px_rgba(34,211,238,.18)]">
+                      <Icon className="h-10 w-10 stroke-[1.35]" />
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-bold text-white">{title}</h3>
+                  <p className="mt-3 max-w-xl text-sm leading-6 text-blue-100/65">{text}</p>
+                  <div className="mt-5 h-px w-12 bg-gradient-to-r from-cyan-300/70 to-transparent transition-all duration-500 group-hover:w-24" />
+                </div>
               </article>
             ))}
           </div>

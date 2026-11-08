@@ -224,7 +224,7 @@ function Index() {
         <img src="/assets/cyber-justice-hero.webp" alt="Lady Justice in a blue digital investigation room" className="absolute inset-0 -z-20 h-full w-full object-cover" fetchPriority="high" />
         <div className="hero-overlay absolute inset-0 -z-10" />
         <div className="mx-auto w-[min(100%-2rem,64rem)] pb-16 pt-32">
-          <p className="eyebrow">Digital forensics & investigations</p>
+          <p className="eyebrow">Recovery forensics & investigations</p>
           <h1 className="mt-4 max-w-2xl text-4xl font-extrabold leading-tight sm:text-6xl">
             Actionable{" "}
             <span key={word} className="word-swap inline-block text-accent">{WORDS[word]}</span>

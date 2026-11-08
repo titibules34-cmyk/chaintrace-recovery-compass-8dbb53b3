@@ -1,4 +1,48 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import certAcfeCfe from "@/assets/certs/acfe-cfe.png";
+import certTali from "@/assets/certs/tali.png";
+import certCyberExpert from "@/assets/certs/cyber-expert.png";
+import certWad from "@/assets/certs/wad.png";
+import certCtce from "@/assets/certs/ctce.png";
+import certSectigo from "@/assets/certs/sectigo.png";
+import certBig from "@/assets/certs/big.png";
+import certGba from "@/assets/certs/gba.png";
+import certGasa from "@/assets/certs/gasa.png";
+import certCompliassure from "@/assets/certs/compliassure.png";
+import certChainalysisReactor from "@/assets/certs/chainalysis-reactor.png";
+import certIacis from "@/assets/certs/iacis.png";
+import certBbb from "@/assets/certs/bbb.png";
+import certFali from "@/assets/certs/fali.png";
+import certChainalysisSpecialist from "@/assets/certs/chainalysis-specialist.png";
+import certTrmAci from "@/assets/certs/trm-aci.png";
+import certDuns from "@/assets/certs/duns.png";
+import certDmca from "@/assets/certs/dmca.png";
+import certAcfeMember from "@/assets/certs/acfe-member.png";
+import certAuthorizeNet from "@/assets/certs/authorize-net.png";
+
+const certifications: [string, string][] = [
+  [certAcfeCfe, "Certified Fraud Examiner"],
+  [certTali, "Texas Association of Licensed Investigators"],
+  [certCyberExpert, "Board Certified Cyber Investigations Expert"],
+  [certWad, "World Association of Detectives"],
+  [certCtce, "Certified Cryptocurrency Expert"],
+  [certSectigo, "Secured by Sectigo"],
+  [certBig, "Blockchain Intelligence Group"],
+  [certGba, "Government Blockchain Association"],
+  [certGasa, "Global Anti-Scam Alliance"],
+  [certCompliassure, "CompliAssure Secured"],
+  [certChainalysisReactor, "Chainalysis Reactor Certification"],
+  [certIacis, "International Association of Computer Investigative Specialists"],
+  [certBbb, "BBB Accredited Business — A+ Rating"],
+  [certFali, "Florida Association of Licensed Investigators"],
+  [certChainalysisSpecialist, "Chainalysis Investigation Specialist Certification"],
+  [certTrmAci, "TRM Anti-Money Laundering Cryptoasset Investigator"],
+  [certDuns, "D-U-N-S Registered"],
+  [certDmca, "Protected by DMCA"],
+  [certAcfeMember, "ACFE Associate Member"],
+  [certAuthorizeNet, "Authorize.Net Verified Merchant"],
+];
+
 import { ArrowLeft, ArrowRight, Scale, ShieldCheck, Search, Network, FileCheck2, Globe, DollarSign, ScanSearch, Radar, LockKeyhole, Crosshair, RotateCcw, SearchCheck, BadgeCheck } from "lucide-react";
 
 export const Route = createFileRoute("/about-us")({
@@ -238,6 +282,70 @@ function AboutUs() {
           </a>
         </div>
       </section>
+
+      <section className="about-rise mt-16 border-y border-blue-200/10 py-14 sm:mt-20 sm:py-16" aria-label="Accreditations and certifications">
+        <div className="mx-auto w-[min(100%,72rem)]">
+          <div className="text-center">
+            <span className="inline-flex rounded-full border border-cyan-200/20 bg-cyan-300/[.08] px-4 py-1.5 text-[.65rem] font-bold tracking-[.18em] text-cyan-200">CREDENTIALS &amp; RECOGNITION</span>
+            <h2 className="mt-4 text-3xl font-extrabold text-white sm:text-4xl">Certificates &amp; Affiliations</h2>
+            <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-blue-100/65">
+              Professional credentials, industry affiliations and security-related marks displayed across Cyber Justice.
+            </p>
+          </div>
+          <ul className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+            {certifications.map(([src, label], index) => (
+              <li key={label} className={`group flex min-h-28 items-center justify-center rounded-2xl border border-blue-200/15 bg-white/[.045] p-4 shadow-lg backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-cyan-300/40 hover:bg-white/[.08] about-rise about-delay-${(index % 5) + 1}`}>
+                <img src={src} alt={label} title={label} loading="lazy" width={816} height={816} className="h-14 w-auto max-w-full object-contain opacity-85 transition duration-300 group-hover:scale-105 group-hover:opacity-100" />
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <footer className="about-rise mt-14 border-t border-blue-200/15 pt-12 sm:mt-16">
+        <div className="grid gap-9 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1.1fr]">
+          <div>
+            <p className="text-sm font-extrabold tracking-[.18em] text-white">CYBER <span className="text-cyan-300">JUSTICE</span></p>
+            <p className="mt-3 max-w-xs text-sm leading-6 text-blue-100/60">
+              Cyber intelligence, digital investigations and asset recovery intelligence — bringing clarity to complex digital matters.
+            </p>
+            <p className="mt-4 text-xs leading-5 text-blue-100/45">Cyber Justice Ltd · Company No. 16458332 · United Kingdom</p>
+          </div>
+          <nav aria-label="Quick links">
+            <p className="text-[.68rem] font-bold tracking-[.2em] text-cyan-200">QUICK LINKS</p>
+            <ul className="mt-4 flex flex-col gap-3 text-sm text-blue-100/65">
+              <li><Link to="/" className="transition hover:text-cyan-200">Home</Link></li>
+              <li><a href="/#services" className="transition hover:text-cyan-200">All Services</a></li>
+              <li><a href="/#tools" className="transition hover:text-cyan-200">Cyber Tools</a></li>
+              <li><a href="/#offices" className="transition hover:text-cyan-200">Office Locations</a></li>
+              <li><a href="/#contact" className="transition hover:text-cyan-200">Contact Us</a></li>
+            </ul>
+          </nav>
+          <nav aria-label="Services">
+            <p className="text-[.68rem] font-bold tracking-[.2em] text-cyan-200">SERVICES</p>
+            <ul className="mt-4 flex flex-col gap-3 text-sm text-blue-100/65">
+              <li><Link to="/asset-recovery" className="transition hover:text-cyan-200">Asset Tracing &amp; Investigations</Link></li>
+              <li><Link to="/cyber-intelligence" className="transition hover:text-cyan-200">Cyber Intelligence Services</Link></li>
+              <li><Link to="/cyber-investigation-team" className="transition hover:text-cyan-200">Cyber Investigation Team</Link></li>
+              <li><Link to="/cryptocurrency-tracing" className="transition hover:text-cyan-200">Cryptocurrency Tracing</Link></li>
+            </ul>
+          </nav>
+          <div>
+            <p className="text-[.68rem] font-bold tracking-[.2em] text-cyan-200">COMPANY DETAILS</p>
+            <dl className="mt-4 flex flex-col gap-3 text-xs text-blue-100/60">
+              <div className="flex justify-between gap-3 border-b border-blue-100/10 pb-2"><dt>Company number</dt><dd className="font-semibold text-blue-50">16458332</dd></div>
+              <div className="flex justify-between gap-3 border-b border-blue-100/10 pb-2"><dt>Incorporated</dt><dd className="font-semibold text-blue-50">19 May 2025</dd></div>
+              <div className="flex justify-between gap-3 border-b border-blue-100/10 pb-2"><dt>Status</dt><dd className="font-semibold text-blue-50">Active</dd></div>
+            </dl>
+            <a href="/#contact" className="mt-5 inline-flex items-center gap-2 rounded-full border border-cyan-200/25 bg-cyan-300/[.08] px-4 py-2 text-xs font-bold text-cyan-100 transition hover:border-cyan-200/60 hover:bg-cyan-300/[.14]">
+              Contact Case Intake <ArrowRight className="h-3.5 w-3.5" />
+            </a>
+          </div>
+        </div>
+        <div className="mt-10 border-t border-blue-200/10 py-5 text-center text-[.68rem] text-blue-100/45">
+          © {new Date().getFullYear()} Cyber Justice Ltd · No recovery outcome is guaranteed · Not legal or financial advice.
+        </div>
+      </footer>
     </main>
   );
 }

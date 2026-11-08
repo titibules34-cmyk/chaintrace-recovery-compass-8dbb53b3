@@ -84,13 +84,22 @@ function AboutUs() {
         @keyframes about-rise { from { opacity: 0; transform: translateY(28px) scale(.985); } to { opacity: 1; transform: translateY(0) scale(1); } }
         @keyframes about-glow { 0%,100% { opacity:.35; transform:scale(1); } 50% { opacity:.65; transform:scale(1.12); } }
         @keyframes about-drift { 0%,100% { transform:translate3d(0,0,0); } 50% { transform:translate3d(0,-12px,0); } }
+        @keyframes about-word-cycle {
+          0%, 3% { opacity:0; transform:translateY(14px); filter:blur(5px); }
+          8%, 27% { opacity:1; transform:translateY(0); filter:blur(0); }
+          33%, 100% { opacity:0; transform:translateY(-14px); filter:blur(5px); }
+        }
+        .about-word { position:absolute; inset:0; opacity:0; animation:about-word-cycle 9s ease-in-out infinite; }
+        .about-word:nth-child(2) { animation-delay:3s; }
+        .about-word:nth-child(3) { animation-delay:6s; }
+        .about-word-window { position:relative; display:inline-block; min-width:min(78vw, 31rem); height:1.25em; vertical-align:bottom; }
         .about-rise { opacity:0; animation:about-rise .8s cubic-bezier(.2,.75,.25,1) forwards; }
         .about-delay-1 { animation-delay:.12s; } .about-delay-2 { animation-delay:.24s; } .about-delay-3 { animation-delay:.36s; }
         .about-delay-4 { animation-delay:.48s; } .about-delay-5 { animation-delay:.6s; }
         .about-orb { animation:about-glow 8s ease-in-out infinite; }
         .about-float { animation:about-drift 7s ease-in-out infinite; }
         .about-grid { background-image:linear-gradient(rgba(148,183,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(148,183,255,.045) 1px,transparent 1px); background-size:52px 52px; mask-image:linear-gradient(to bottom,black,transparent 88%); }
-        @media (prefers-reduced-motion: reduce) { .about-rise,.about-orb,.about-float { animation:none; opacity:1; } }
+        @media (prefers-reduced-motion: reduce) { .about-rise,.about-orb,.about-float { animation:none; opacity:1; } .about-word { animation:none; opacity:0; } .about-word:first-child { opacity:1; } }
       `}</style>
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_50%_0%,rgba(43,120,220,.22),transparent_55%),linear-gradient(180deg,#081b3c_0%,#0b2048_55%,#081a39_100%)]" />
       <div className="about-grid pointer-events-none absolute inset-0 -z-10" />
@@ -111,7 +120,7 @@ function AboutUs() {
           </span>
           <h1 className="mt-5 text-5xl font-extrabold tracking-tight text-white sm:text-7xl">About Us</h1>
           <p className="mx-auto mt-4 max-w-3xl text-xl font-semibold leading-snug text-blue-100/75 sm:text-3xl">
-            Experts in <span className="bg-gradient-to-r from-cyan-300 to-blue-400 bg-clip-text text-transparent">Cyber Justice</span>
+            Experts in <span className="about-word-window bg-gradient-to-r from-cyan-300 to-blue-400 bg-clip-text text-transparent"><span className="about-word">Cyber Investigations</span><span className="about-word">Cryptocurrency Tracing</span><span className="about-word">Offshore Intelligence</span></span>
           </p>
           <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-blue-100/60 sm:text-base">
             Bringing clarity to complex digital investigations through intelligence, rigorous analysis and evidence-led action.

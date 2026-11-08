@@ -170,15 +170,17 @@ const CONTACT_EMAIL = "info@cyberjustice.uk";
 const contactCards = [
   {
     icon: Send,
-    title: "Email Us Directly",
+    title: "Direct Case Intake & Hotline",
     text: (
-      <a
-        href={`mailto:${CONTACT_EMAIL}`}
-        className="inline-flex items-center gap-2 font-semibold text-accent transition hover:underline"
-      >
-        {CONTACT_EMAIL}
-        <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
-      </a>
+      <>
+        <a
+          href={`mailto:${CONTACT_EMAIL}`}
+          className="font-bold text-accent transition hover:underline"
+        >
+          {CONTACT_EMAIL}
+        </a>
+        {" "}Tap to email us, or use the confidential case form.
+      </>
     ),
   },
   {
